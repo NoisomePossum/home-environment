@@ -1,4 +1,3 @@
-execute pathogen#infect()
 syntax on
 
 set clipboard=unnamed
@@ -19,8 +18,7 @@ set expandtab "inserts spaces instead of tabs
 "end General settings
 
 "Plugin settings
-filetype plugin indent on
-
+filetype plugin on
 runtime macros/matchit.vim
 
 "Macros and other variable settings
