@@ -1,6 +1,23 @@
-syntax on
+set nocompatible
 
+syntax on
+filetype plugin indent on
+
+set encoding=utf-8
+set fileencoding=utf-8
 set clipboard=unnamed
+set number relativenumber
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
+set guioptions-=T "turns off toolbar
+set tabstop=4 "sets tabs already in document to 4 spaces
+set shiftwidth=4 "pressing '>' creates a 4-space tab
+set autoindent
+set smarttab
+set expandtab "inserts spaces instead of tabs
 
 
 "Color and theme settings
@@ -8,22 +25,15 @@ set background=dark
 "colorscheme solarized
 "end Color and theme settings
 
-"General settings
-set encoding=utf-8
-set guioptions-=T "turns off toolbar
-augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
-augroup END
-set number relativenumber
-set tabstop=4 "sets tabs already in document to 4 spaces
-set shiftwidth=4 "pressing '>' creates a 4-space tab
-set expandtab "inserts spaces instead of tabs
-"end General settings
+"Remappings
+noremap <Up> <C-w><C-k>
+noremap <Down> <C-w><C-j>
+noremap <Left> <C-w><C-h>
+noremap <Right> <C-w><C-l>
+map Y y$
+
 
 "Plugin settings
-filetype plugin on
 runtime macros/matchit.vim
 
 "Macros and other variable settings
@@ -48,9 +58,3 @@ let &t_te .= "\<Esc>[0 q" " Sets cursor shape on exiting vim
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
 
-"Remappings
-noremap <Up> <C-w><C-k>
-noremap <Down> <C-w><C-j>
-noremap <Left> <C-w><C-h>
-noremap <Right> <C-w><C-l>
-map Y y$
