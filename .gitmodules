@@ -4,3 +4,6 @@
 [submodule ".vim/pack/possum/start/nerdtree"]
 	path = .vim/pack/possum/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/pack/possum/start/vim-commentary"]
+	path = .vim/pack/possum/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
