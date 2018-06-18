@@ -11,7 +11,12 @@ set background=dark
 "General settings
 set encoding=utf-8
 set guioptions-=T "turns off toolbar
-set number
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
+set number relativenumber
 set tabstop=4 "sets tabs already in document to 4 spaces
 set shiftwidth=4 "pressing '>' creates a 4-space tab
 set expandtab "inserts spaces instead of tabs
