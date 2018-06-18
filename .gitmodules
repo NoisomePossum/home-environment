@@ -1,27 +1,6 @@
 [submodule "nerdtree"]
 	path = nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "pack/possum/start/nerdtree"]
-	path = pack/possum/start/nerdtree
+[submodule ".vim/pack/possum/start/nerdtree"]
+	path = .vim/pack/possum/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "pack/possum/start/vim-commentary"]
-	path = pack/possum/start/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "pack/possum/start/vim-fugitive"]
-	path = pack/possum/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "pack/possum/start/vim-gitgutter"]
-	path = pack/possum/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "pack/possum/start/vim-polyglot"]
-	path = pack/possum/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "pack/possum/start/vim-repeat"]
-	path = pack/possum/start/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
-[submodule "pack/possum/start/vim-sensible"]
-	path = pack/possum/start/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
-[submodule "pack/possum/start/vim-surround"]
-	path = pack/possum/start/vim-surround
-	url = https://github.com/tpope/vim-surround.git
