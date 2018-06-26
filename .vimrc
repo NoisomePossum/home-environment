@@ -7,6 +7,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set clipboard=unnamed
 set number relativenumber
+set ignorecase
+set smartcase
 augroup numbertoggle
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
