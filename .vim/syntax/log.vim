@@ -26,7 +26,7 @@ hi def link log_string 		String
 hi def link log_number 		Number
 hi def link log_date 		Constant
 hi def link log_time 		Type
-hi def link log_warning 	WarningMsg
+hi def link log_warning 	SignColumn
 hi def link log_error 		WarningMsg
 
 

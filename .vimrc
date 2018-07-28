@@ -24,7 +24,7 @@ set expandtab "inserts spaces instead of tabs
 
 "Color and theme settings
 set background=dark
-"colorscheme solarized
+colorscheme desert
 "end Color and theme settings
 
 "Remappings
@@ -60,3 +60,7 @@ let &t_te .= "\<Esc>[0 q" " Sets cursor shape on exiting vim
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
 
+"Nvim specific settings
+if has('nvim') && executable('nvr')
+    let $VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+endif
