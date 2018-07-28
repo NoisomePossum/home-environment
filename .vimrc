@@ -36,10 +36,23 @@ colorscheme desert
 "end Color and theme settings
 
 "Remappings
-noremap <Up> <C-w><C-k>
-noremap <Down> <C-w><C-j>
+"Remap arrow keys to switch between windows
 noremap <Left> <C-w><C-h>
+noremap <Down> <C-w><C-j>
+noremap <Up> <C-w><C-k>
 noremap <Right> <C-w><C-l>
+"Allows quick switching between windows
+nnoremap <M-h> <C-w><C-h>
+nnoremap <M-j> <C-w><C-j>
+nnoremap <M-k> <C-w><C-k>
+nnoremap <M-l> <C-w><C-l>
+if has('nvim')
+  tnoremap <M-h> <C-\><C-n><C-w><C-h>
+  tnoremap <M-j> <C-\><C-n><C-w><C-j>
+  tnoremap <M-k> <C-\><C-n><C-w><C-k>
+  tnoremap <M-l> <C-\><C-n><C-w><C-l>
+endif
+"Makes 'Y' act like 'D', 'C' etc.
 map Y y$
 
 
@@ -69,6 +82,13 @@ let &t_te .= "\<Esc>[0 q" " Sets cursor shape on exiting vim
 " 6 -> solid vertical bar
 
 "Nvim specific settings
+"Allows 'escape' to switch to normal mode while in terminal mode
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+endif
+"Ensures that programs that open a default editor won't create nested
+"instances of nvim
 if has('nvim') && executable('nvr')
     let $VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 endif
