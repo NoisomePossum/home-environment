@@ -54,6 +54,8 @@ if has('nvim')
 endif
 "Makes 'Y' act like 'D', 'C' etc.
 map Y y$
+"Activate fuzzy finder 'fzf'
+nnoremap <C-p> :<C-u>FZF<CR>
 
 
 "Plugin settings

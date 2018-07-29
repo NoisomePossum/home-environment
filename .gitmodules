@@ -25,3 +25,6 @@
 [submodule ".vim/pack/possum/start/vim-obsession"]
 	path = .vim/pack/possum/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
+[submodule ".vim/pack/possum/start/fzf"]
+	path = .vim/pack/possum/start/fzf
+	url = https://github.com/junegunn/fzf.git
