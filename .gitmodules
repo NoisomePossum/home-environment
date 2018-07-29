@@ -22,3 +22,6 @@
 [submodule ".vim/pack/possum/start/vim-surround"]
 	path = .vim/pack/possum/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/possum/start/vim-obsession"]
+	path = .vim/pack/possum/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
