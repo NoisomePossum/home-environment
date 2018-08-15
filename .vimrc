@@ -63,7 +63,15 @@ nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 map Y y$
 "Activate fuzzy finder 'fzf'
 nnoremap <C-p> :<C-u>FZF<CR>
-
+"For Javascript files, use `eslint` (and only eslint)
+let g:ale_linters = {
+  'javascript': ['eslint'],
+}
+"Mappings in the style of vim-unimpaired
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]w <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
 
 "Plugin settings
 runtime macros/matchit.vim
