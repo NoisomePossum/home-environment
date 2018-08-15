@@ -28,3 +28,6 @@
 [submodule ".vim/pack/possum/start/fzf"]
 	path = .vim/pack/possum/start/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule ".vim/pack/possum/start/vim-tmux-navigator"]
+	path = .vim/pack/possum/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git

@@ -52,6 +52,13 @@ if has('nvim')
   tnoremap <M-k> <C-\><C-n><C-w><C-k>
   tnoremap <M-l> <C-\><C-n><C-w><C-l>
 endif
+"Allows above motions to switch between windows in tmux
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 "Makes 'Y' act like 'D', 'C' etc.
 map Y y$
 "Activate fuzzy finder 'fzf'
