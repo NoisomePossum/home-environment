@@ -64,7 +64,8 @@ map Y y$
 "Activate fuzzy finder 'fzf'
 nnoremap <C-p> :<C-u>FZF<CR>
 "Toggle NERDTREE"
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>n :NERDTree<CR>
+map <Leader>N :NERDTreeToggle<CR>
 "For Javascript files, use `eslint` (and only eslint)
 let g:ale_linters = {
 \  'javascript': ['eslint'],
