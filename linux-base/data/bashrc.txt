@@ -7,10 +7,10 @@ export LSCOLORS=cxfxhxhxbxhxhxhxbxbxcxcx
 export EDITOR="/usr/local/bin/nvim"
 export VISUAL="/usr/local/bin/nvim"
 
-alias dlog="cd /var/log/datadog"
-alias lsdlog="ls /var/log/datadog"
-alias confd="cd /etc/datadog-agent/conf.d"
-alias lsconfd="ls /etc/datadog-agent/conf.d"
+alias dlg="cd /var/log/datadog"
+alias ldlg="ls /var/log/datadog"
+alias cfd="cd /etc/datadog-agent/conf.d"
+alias lcfd="ls /etc/datadog-agent/conf.d"
 
 alias ovim="/usr/bin/vim"
 alias vim="~/nvim.appimage"
