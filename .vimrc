@@ -9,10 +9,12 @@ set clipboard=unnamed
 set number relativenumber
 set ignorecase
 set smartcase
+"Toggle relative line numbering when focus changes to another pane
+"Toggle relative line numbering when entering/exiting command-line mode
 augroup numbertoggle
     autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter,WinLeave * set norelativenumber
 augroup END
 set guioptions-=T "turns off toolbar
 set tabstop=2 "sets tabs already in document to 2 spaces
@@ -37,10 +39,10 @@ colorscheme desert
 
 "Remappings
 "Remap arrow keys to switch between windows
-noremap <Left> <C-w><C-h>
-noremap <Down> <C-w><C-j>
-noremap <Up> <C-w><C-k>
-noremap <Right> <C-w><C-l>
+" noremap <Left> <C-w><C-h>
+" noremap <Down> <C-w><C-j>
+" noremap <Up> <C-w><C-k>
+" noremap <Right> <C-w><C-l>
 "Allows quick switching between windows
 nnoremap <M-h> <C-w><C-h>
 nnoremap <M-j> <C-w><C-j>
