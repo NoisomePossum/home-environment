@@ -9,8 +9,8 @@ export VISUAL="/usr/local/bin/nvim"
 
 alias dlg="cd /var/log/datadog"
 alias ldlg="ls /var/log/datadog"
-alias cfd="cd /etc/datadog-agent/conf.d"
-alias lcfd="ls /etc/datadog-agent/conf.d"
+alias cf="cd /etc/datadog-agent/conf.d"
+alias lcf="ls /etc/datadog-agent/conf.d"
 
 alias ovim="/usr/bin/vim"
 alias vim="~/nvim.appimage"
