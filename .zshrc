@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export DATADOG_ROOT=/Users/michael.shaughnessy/dd/
+export PATH=$HOME/bin:/usr/local/bin:$DATADOG_ROOT/devtools/bin:$GOPATH/bin:$PATH
+export TO_STAGING_QUIET_ON_MERGE='false'
+export TO_STAGING_NOTIFY_BEFORE_MERGE='true'
 
 # Adding hub to FPATH for github plugin
 # if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
@@ -109,8 +112,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# export EDITOR="/usr/local/bin/nvim"
-# export VISUAL="/usr/local/bin/nvim"
+export GOPATH=$HOME/go
+export EDITOR="/usr/local/bin/nvim"
+export VISUAL="/usr/local/bin/nvim"
 alias gb="git --no-pager branch"
 
 export GREP_OPTIONS="--color=always"
@@ -122,9 +126,10 @@ alias flare="vim -c 'cd ~/Downloads/flare/'"
 alias features="cd ~/dd/consul-config/datadog/"
 alias ddoc="cd ~/dd/documentation/"
 alias logs="cd ~/logstest/"
-
-alias d="kitty +kitten diff"
+alias regexbuddy="wine ~/.wine/drive_c/Program\ Files/Just\ Great\ Software/RegexBuddy\ 4/RegexBuddy4.exe"
 
 alias gitbranchname="git rev-parse --abbrev-ref HEAD"
 alias gitreponame='basename `git rev-parse --show-toplevel`'
 alias github='open https://github.com/DataDog/`gitreponame`/compare/`gitbranchname`'
+
+eval "$(jira --completion-script-zsh)"
