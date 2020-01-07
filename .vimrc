@@ -17,8 +17,8 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter,WinLeave * set norelativenumber
 augroup END
 set guioptions-=T "turns off toolbar
-set tabstop=2 "sets tabs already in document to 2 spaces
-set shiftwidth=2 "pressing '>' creates a 2-space tab
+set tabstop=4 "sets tabs already in document to 4 spaces
+set shiftwidth=4 "pressing '>' creates a 4-space tab
 set autoindent
 set smarttab
 set expandtab "inserts spaces instead of tabs
