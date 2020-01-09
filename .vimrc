@@ -114,3 +114,20 @@ endif
 if has('nvim') && executable('nvr')
     let $VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 endif
+
+"Install vim-plug if not already present
+if empty(glob('~/vim-settings/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+"Install plugins with vim-plug
+call plug#begin()
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" tabular plugin is used to format tables
+Plug 'godlygeek/tabular'
+" JSON front matter highlight plugin
+Plug 'elzr/vim-json'
+Plug 'plasticboy/vim-markdown'
+call plug#end()
