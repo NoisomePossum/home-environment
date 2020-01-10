@@ -34,7 +34,7 @@ augroup END
 
 "Color and theme settings
 set background=dark
-colorscheme desert
+" colorscheme desert
 "end Color and theme settings
 
 "Remappings
@@ -72,7 +72,7 @@ map <Leader>N :NERDTreeToggle<CR>
 let g:ale_linters = {
 \  'javascript': ['eslint'],
 \ }
-"Mappings in the style of vim-unimpaired
+"Ale Mappings in the style of vim-unimpaired
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
@@ -130,4 +130,12 @@ Plug 'godlygeek/tabular'
 " JSON front matter highlight plugin
 Plug 'elzr/vim-json'
 Plug 'plasticboy/vim-markdown'
+Plug 'arcticicestudio/nord-vim'
+Plug 'Raku/vim-raku'
 call plug#end()
+
+"Activate Nord colorscheme
+colorscheme nord
+
+" Make raku operators automatically convert to unicode
+let g:raku_unicode_abbrevs = 1
