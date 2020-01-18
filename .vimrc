@@ -78,6 +78,10 @@ nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
 
+"Mappings to toggle hidden characters
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
 "Plugin settings
 runtime macros/matchit.vim
 
@@ -132,6 +136,7 @@ Plug 'elzr/vim-json'
 Plug 'plasticboy/vim-markdown'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Raku/vim-raku'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "Activate Nord colorscheme
@@ -139,3 +144,16 @@ colorscheme nord
 
 " Make raku operators automatically convert to unicode
 let g:raku_unicode_abbrevs = 1
+
+"Change Vimwiki syntax to standard markdown
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+" Change Vimwiki bindings
+:nmap <Leader>wf <Plug>VimwikiFollowLink
+:nmap <Leader>swf <Plug>VimwikiSplitLink
+:nmap <Leader>vwf <Plug>VimwikiVSplitLink
+:nmap <Leader>wb <Plug>VimwikiGoBackLink
+:nmap [K gg<Plug>VimwikiNextLink
+:nmap [k <Plug>VimwikiPrevLink
+:nmap ]K G<Plug>VimwikiPrevLink
+:nmap ]k <Plug>VimwikiNextLink
