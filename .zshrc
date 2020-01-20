@@ -1,8 +1,13 @@
 # If you come from bash you might have to change your $PATH.
-export DATADOG_ROOT=/Users/michael.shaughnessy/dd/
+export GOPATH=$HOME/go
+export DATADOG_ROOT=/Users/michael.shaughnessy/dd
 export PATH=$HOME/bin:/usr/local/bin:$DATADOG_ROOT/devtools/bin:$GOPATH/bin:$PATH
 export TO_STAGING_QUIET_ON_MERGE='false'
 export TO_STAGING_NOTIFY_BEFORE_MERGE='true'
+
+export EDITOR="/usr/local/bin/nvim"
+export VISUAL="/usr/local/bin/nvim"
+source ~/perl5/perlbrew/etc/bashrc
 
 # Adding hub to FPATH for github plugin
 # if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
@@ -16,7 +21,7 @@ export ZSH="/Users/michael.shaughnessy/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 DEFAULT_USER=$USER
 
 # Set list of themes to pick from when loading at random
@@ -112,9 +117,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export GOPATH=$HOME/go
-export EDITOR="/usr/local/bin/nvim"
-export VISUAL="/usr/local/bin/nvim"
 alias gb="git --no-pager branch"
 
 export GREP_OPTIONS="--color=always"
@@ -126,10 +128,21 @@ alias flare="vim -c 'cd ~/Downloads/flare/'"
 alias features="cd ~/dd/consul-config/datadog/"
 alias ddoc="cd ~/dd/documentation/"
 alias logs="cd ~/logstest/"
+alias note="vim ~/vimwiki/index.md"
+alias tasks="vim ~/vimwiki/Tasks.md"
 alias regexbuddy="wine ~/.wine/drive_c/Program\ Files/Just\ Great\ Software/RegexBuddy\ 4/RegexBuddy4.exe"
+alias rk="perl6"
 
 alias gitbranchname="git rev-parse --abbrev-ref HEAD"
 alias gitreponame='basename `git rev-parse --show-toplevel`'
 alias github='open https://github.com/DataDog/`gitreponame`/compare/`gitbranchname`'
 
 eval "$(jira --completion-script-zsh)"
+# eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+if which plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
+
+# add syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

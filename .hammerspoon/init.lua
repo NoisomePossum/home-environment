@@ -137,7 +137,7 @@ hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "m", function()
 end)
 -- Draws a circle around mouse on command
 spoon.MouseCircle:bindHotkeys({
-    show = { { "ctrl", "cmd", "alt"}, "d" }
+    show = { { "ctrl", "shift", "alt"}, "d" }
 })
 
 -- =====================
@@ -156,18 +156,11 @@ hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "p", function()
   hs.application.launchOrFocus("Spotify")
 end)
 
-hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "n", function()
-  hs.application.launchOrFocus("Notion")
-end)
-
 hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "c", function()
-  hs.application.launchOrFocus("Fantastical")
+  hs.application.launchOrFocus("Google Chrome")
 end)
 -- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "d", function()
 --   hs.application.launchOrFocus("IntelliJ")
--- end)
--- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "d", function()
---   hs.application.launchOrFocus("Chrome")
 -- end)
 -- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "d", function()
 --   hs.application.launchOrFocus("Brave")
