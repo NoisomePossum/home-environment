@@ -145,6 +145,9 @@ colorscheme nord
 " Make raku operators automatically convert to unicode
 let g:raku_unicode_abbrevs = 1
 
+"This line is necessary to stop vimwiki from
+"changing the filetipe of .md files outside of the wiki
+let g:vimwiki_global_ext=0
 "Change Vimwiki syntax to standard markdown
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
@@ -155,5 +158,5 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 :nmap <Leader>wb <Plug>VimwikiGoBackLink
 :nmap [K gg<Plug>VimwikiNextLink
 :nmap [k <Plug>VimwikiPrevLink
-:nmap ]K G<Plug>VimwikiPrevLink
+:nmap ]K gg<Plug>VimwikiPrevLink
 :nmap ]k <Plug>VimwikiNextLink
