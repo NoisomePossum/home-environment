@@ -129,9 +129,10 @@ alias features="cd ~/dd/consul-config/datadog/"
 alias ddoc="cd ~/dd/documentation/"
 alias logs="cd ~/logstest/"
 alias note="vim ~/vimwiki/index.md"
-alias tasks="vim ~/vimwiki/Tasks.md"
+alias todo="vim ~/vimwiki/Tasks.md"
 alias regexbuddy="wine ~/.wine/drive_c/Program\ Files/Just\ Great\ Software/RegexBuddy\ 4/RegexBuddy4.exe"
 alias rk="perl6"
+alias cl="colorls"
 
 alias gitbranchname="git rev-parse --abbrev-ref HEAD"
 alias gitreponame='basename `git rev-parse --show-toplevel`'
@@ -146,3 +147,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
