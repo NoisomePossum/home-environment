@@ -12,5 +12,4 @@ alias ldlg="ls /var/log/datadog"
 alias cf="cd /etc/datadog-agent/conf.d"
 alias lcf="ls /etc/datadog-agent/conf.d"
 
-alias ovim="/usr/bin/vim"
-alias vim="~/nvim.appimage"
+alias vim="sudo vim"
