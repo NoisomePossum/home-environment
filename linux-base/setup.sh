@@ -21,24 +21,6 @@ echo "Configuring dd-agent"
 echo "copying .bashrc settings"
 cp ~/data/bashrc.txt ~/.bashrc
 
-sudo service datadog-agent start
-
-# Iterate through all .txt files in VAGRANT_HOME/data/logfiles/
-# Capture just the filename without the filepath and also
-# get the filename without the extension
-LOGFILE="\/home\/vagrant\/data\/logfiles\/(([^\.\/]*)\.txt)$"
-for file in ~/data/logfiles/*.txt; do
-    if [[ $file =~ $LOGFILE ]]
-    then
-        # BASH_REMATCH is an array that captures the previous regex as index 0
-        # and all capture groups as indexes 1 - x
-        FILENAME="${BASH_REMATCH[1]}"
-        FILE="${BASH_REMATCH[2]}"
-        echo "Converting $FILENAME to log file."
-        sudo cp ~/data/logfiles/$FILENAME /var/log/datadog/$FILE.log
-    fi
-done
-
 # Iterate through all .conf files in VAGRANT_HOME/data/logfiles/
 # Capture just the filename without the filepath and also
 # get the filename without the extension
@@ -54,5 +36,27 @@ for file in ~/data/logfiles/*.conf; do
         sudo mkdir -p /etc/datadog-agent/conf.d/$FILE.d
         echo "Converting $FILENAME to conf.d file."
         sudo cp ~/data/logfiles/$FILENAME /etc/datadog-agent/conf.d/$FILE.d/conf.yaml
+    fi
+done
+
+sudo service datadog-agent start
+
+# Give the Agent time to get started before copying log files over.
+echo "Waiting 10 seconds before moving log files."
+sleep 10
+
+# Iterate through all .txt files in VAGRANT_HOME/data/logfiles/
+# Capture just the filename without the filepath and also
+# get the filename without the extension
+LOGFILE="\/home\/vagrant\/data\/logfiles\/(([^\.\/]*)\.txt)$"
+for file in ~/data/logfiles/*.txt; do
+    if [[ $file =~ $LOGFILE ]]
+    then
+        # BASH_REMATCH is an array that captures the previous regex as index 0
+        # and all capture groups as indexes 1 - x
+        FILENAME="${BASH_REMATCH[1]}"
+        FILE="${BASH_REMATCH[2]}"
+        echo "Converting $FILENAME to log file."
+        sudo cp ~/data/logfiles/$FILENAME /var/log/datadog/$FILE.log
     fi
 done

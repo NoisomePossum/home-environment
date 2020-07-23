@@ -129,14 +129,27 @@ alias features="cd ~/dd/consul-config/datadog/"
 alias ddoc="cd ~/dd/documentation/"
 alias logs="cd ~/logstest/"
 alias note="vim ~/vimwiki/index.md"
-alias todo="vim ~/vimwiki/Tasks.md"
+alias todo="vim ~/vimwiki/todo/Tasks.md"
 alias regexbuddy="wine ~/.wine/drive_c/Program\ Files/Just\ Great\ Software/RegexBuddy\ 4/RegexBuddy4.exe"
 alias rk="perl6"
 alias cl="colorls"
+alias ezlog="cp -r ~/sandbox/ubuntu/xenial-16.04/ez-logs-tailing"
+alias ezdock="cp -r ~/sandbox/ubuntu/xenial-16.04/ez-docker-logs"
+alias ddlog="rk ~/raku/raku-projects/ddlog-forwarder/ddforward.raku"
 
 alias gitbranchname="git rev-parse --abbrev-ref HEAD"
 alias gitreponame='basename `git rev-parse --show-toplevel`'
 alias github='open https://github.com/DataDog/`gitreponame`/compare/`gitbranchname`'
+# alias gsquash='git rebase --interactive HEAD~'
+
+# Logs devenv shortcuts
+alias logs_start="cd $DATADOG_ROOT/logs-devenv;./devenv.sh start"
+alias logs_stop="cd $DATADOG_ROOT/logs-devenv;./devenv.sh stop"
+alias logs_f="export DEVENV_MODE=FRONTEND"
+alias logs_b="export DEVENV_MODE=BACKEND"
+alias logs_o="export DEVENV_MODE=BACKEND_ONLY"
+alias logs_ecr="export DEVENV_USE_ECR=1"
+alias maven_install="mvn install clean -DskipTests"
 
 eval "$(jira --completion-script-zsh)"
 # eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
@@ -150,3 +163,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+# store key in the login keychain instead of aws-vault managing a hidden keychain
+export AWS_VAULT_KEYCHAIN_NAME=login
+
+# tweak session times so you dont have to re-enter passwords every 5min
+export AWS_SESSION_TTL=24h
+export AWS_ASSUME_ROLE_TTL=1h

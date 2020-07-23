@@ -144,24 +144,26 @@ spoon.MouseCircle:bindHotkeys({
 -- App shortcuts
 -- =====================
 
-hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", function()
-  hs.application.launchOrFocus("Slack")
-end)
+-- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", function()
+--   hs.application.launchOrFocus("Firefox")
+-- end)
 
 hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "t", function()
-  hs.application.launchOrFocus("iTerm")
+  hs.application.launchOrFocus("alacritty")
 end)
 
-hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "p", function()
+hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", function()
   hs.application.launchOrFocus("Spotify")
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "c", function()
   hs.application.launchOrFocus("Google Chrome")
 end)
-hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "f", function()
-  hs.application.launchOrFocus("Marta")
+
+hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "b", function()
+  hs.application.launchOrFocus("Brave Browser")
 end)
--- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "d", function()
---   hs.application.launchOrFocus("Brave")
--- end)
+
+hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "f", function()
+  hs.application.launchOrFocus("Finder")
+end)
