@@ -9,6 +9,7 @@ set clipboard=unnamed
 set number relativenumber
 set ignorecase
 set smartcase
+set nofoldenable
 "Toggle relative line numbering when focus changes to another pane
 "Toggle relative line numbering when entering/exiting command-line mode
 augroup numbertoggle
@@ -44,23 +45,23 @@ set background=dark
 " noremap <Up> <C-w><C-k>
 " noremap <Right> <C-w><C-l>
 "Allows quick switching between windows
-nnoremap <M-h> <C-w><C-h>
-nnoremap <M-j> <C-w><C-j>
-nnoremap <M-k> <C-w><C-k>
-nnoremap <M-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
 if has('nvim')
-  tnoremap <M-h> <C-\><C-n><C-w><C-h>
-  tnoremap <M-j> <C-\><C-n><C-w><C-j>
-  tnoremap <M-k> <C-\><C-n><C-w><C-k>
-  tnoremap <M-l> <C-\><C-n><C-w><C-l>
+  tnoremap <C-h> <C-\><C-n><C-w><C-h>
+  tnoremap <C-j> <C-\><C-n><C-w><C-j>
+  tnoremap <C-k> <C-\><C-n><C-w><C-k>
+  tnoremap <C-l> <C-\><C-n><C-w><C-l>
 endif
 "Allows above motions to switch between windows in tmux
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 "Makes 'Y' act like 'D', 'C' etc.
 map Y y$
 "Activate fuzzy finder 'fzf'
@@ -137,6 +138,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Raku/vim-raku'
 Plug 'vimwiki/vimwiki'
+Plug 'ruanyl/vim-gh-line'
 call plug#end()
 
 "Activate Nord colorscheme
