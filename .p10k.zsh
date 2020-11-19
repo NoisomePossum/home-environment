@@ -35,17 +35,18 @@
   fi
 
   # Create a custom cursor
-  typeset -g POWERLEVEL9K_CUSTOM_CURSOR="echo -n '\uF155'"
+  typeset -g POWERLEVEL9K_CUSTOM_CURSOR="echo -n '\uF054'"
   typeset -g POWERLEVEL9K_CUSTOM_CURSOR_BACKGROUND="black"
   typeset -g POWERLEVEL9K_CUSTOM_CURSOR_FOREGROUND="green"
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    dir                     # current directory
     vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
+    time                    # current time
     # =========================[ Line #2 ]=========================
     newline
     vcs                     # git status
+    dir                     # current directory
     custom_cursor
     # prompt_char           # prompt symbol
   )
@@ -60,7 +61,7 @@
     # =========================[ Line #1 ]=========================
     # =========================[ Line #2 ]=========================
     status                  # exit code of the last command
-    command_execution_time  # duration of the last command
+    # command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     # virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
@@ -97,7 +98,6 @@
     # ram                   # free RAM
     # load                  # CPU load
     todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
-    time                    # current time
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
     # battery               # internal battery

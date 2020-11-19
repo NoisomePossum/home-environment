@@ -22,6 +22,14 @@ hs.window.highlight.start()
 hs.hotkey.bind({"cmd"}, "E", function()
   hs.hints.windowHints()
 end)
+-- Window switcher
+switcher = hs.window.switcher.new() -- default windowfilter: only visible windows, all Spaces
+switcher_space = hs.window.switcher.new(hs.window.filter.new():setCurrentSpace(true):setDefaultFilter{}) -- include minimized/hidden windows, current Space only
+switcher_browsers = hs.window.switcher.new{'Safari','Google Chrome'} -- specialized switcher for your dozens of browser windows :)
+
+-- bind to hotkeys; WARNING: at least one modifier key is required!
+hs.hotkey.bind('alt','tab','Next window',function()switcher:next()end)
+hs.hotkey.bind('alt-shift','tab','Prev window',function()switcher:previous()end)
 
 -- =====================
 -- Window movement
@@ -132,13 +140,13 @@ spoon.WindowScreenLeftAndRight:bindHotkeys({
 -- =====================
 
 -- Centers the cursor on the current window
-hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "m", function()
-  spoon.WinWin:centerCursor()
-end)
+-- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "m", function()
+--   spoon.WinWin:centerCursor()
+-- end)
 -- Draws a circle around mouse on command
-spoon.MouseCircle:bindHotkeys({
-    show = { { "ctrl", "shift", "alt"}, "d" }
-})
+-- spoon.MouseCircle:bindHotkeys({
+--     show = { { "ctrl", "shift", "alt"}, "d" }
+-- })
 
 -- =====================
 -- App shortcuts
@@ -152,9 +160,9 @@ hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "t", function()
   hs.application.launchOrFocus("alacritty")
 end)
 
-hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", function()
-  hs.application.launchOrFocus("Spotify")
-end)
+-- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", function()
+--   hs.application.launchOrFocus("Spotify")
+-- end)
 
 hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "c", function()
   hs.application.launchOrFocus("Google Chrome")
@@ -164,6 +172,18 @@ hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "b", function()
   hs.application.launchOrFocus("Brave Browser")
 end)
 
-hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "f", function()
+hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", function()
   hs.application.launchOrFocus("Finder")
+end)
+
+hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "d", function()
+  hs.application.launchOrFocus("Discord")
+end)
+
+hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "f", function()
+  hs.application.launchOrFocus("Firefox")
+end)
+
+hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "m", function()
+  hs.application.launchOrFocus("zoom.us")
 end)

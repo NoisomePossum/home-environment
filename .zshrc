@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export GOPATH=$HOME/go
 export DATADOG_ROOT=/Users/michael.shaughnessy/dd
-export PATH=$HOME/bin:/usr/local/bin:$DATADOG_ROOT/devtools/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$DATADOG_ROOT/devtools/bin:$GOPATH/bin:$HOME/.perl6/bin:/usr/local/Cellar/rakudo-star/2020.01_1/share/perl6/site/bin:$PATH
 export TO_STAGING_QUIET_ON_MERGE='false'
 export TO_STAGING_NOTIFY_BEFORE_MERGE='true'
 
@@ -129,6 +129,7 @@ alias features="cd ~/dd/consul-config/datadog/"
 alias ddoc="cd ~/dd/documentation/"
 alias logs="cd ~/logstest/"
 alias note="vim ~/vimwiki/index.md"
+alias bm="vim ~/vimwiki/chrome-bookmarks.md"
 alias todo="vim ~/vimwiki/todo/Tasks.md"
 alias regexbuddy="wine ~/.wine/drive_c/Program\ Files/Just\ Great\ Software/RegexBuddy\ 4/RegexBuddy4.exe"
 alias rk="perl6"
@@ -136,6 +137,7 @@ alias cl="colorls"
 alias ezlog="cp -r ~/sandbox/ubuntu/xenial-16.04/ez-logs-tailing"
 alias ezdock="cp -r ~/sandbox/ubuntu/xenial-16.04/ez-docker-logs"
 alias ddlog="rk ~/raku/raku-projects/ddlog-forwarder/ddforward.raku"
+alias vigol="docker run --rm -it -e \"key=5e2ddd8ea17b9d9022dc352132b90487\" kramos/vimgolf "
 
 alias gitbranchname="git rev-parse --abbrev-ref HEAD"
 alias gitreponame='basename `git rev-parse --show-toplevel`'
@@ -150,6 +152,9 @@ alias logs_b="export DEVENV_MODE=BACKEND"
 alias logs_o="export DEVENV_MODE=BACKEND_ONLY"
 alias logs_ecr="export DEVENV_USE_ECR=1"
 alias maven_install="mvn install clean -DskipTests"
+
+# snippets
+lastdl () { echo "~/Downloads/$(ls -tr ~/Downloads/|tail -1)" }
 
 eval "$(jira --completion-script-zsh)"
 # eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
