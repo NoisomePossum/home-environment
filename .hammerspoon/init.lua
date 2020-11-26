@@ -9,7 +9,7 @@ hs.loadSpoon("WinWin")
 -- Window Highlighting
 -- =====================
 hs.window.highlight.ui.overlay = true
-hs.window.highlight.ui.frameWidth = 10
+hs.window.highlight.ui.frameWidth = 5
 hs.window.highlight.ui.frameColor = {1, 0.176, 0.522, 1}
 -- hs.window.highlight.ui.flashDuration=0.3
 hs.window.highlight.start()
@@ -22,14 +22,19 @@ hs.window.highlight.start()
 hs.hotkey.bind({"cmd"}, "E", function()
   hs.hints.windowHints()
 end)
+
 -- Window switcher
 switcher = hs.window.switcher.new() -- default windowfilter: only visible windows, all Spaces
 switcher_space = hs.window.switcher.new(hs.window.filter.new():setCurrentSpace(true):setDefaultFilter{}) -- include minimized/hidden windows, current Space only
 switcher_browsers = hs.window.switcher.new{'Safari','Google Chrome'} -- specialized switcher for your dozens of browser windows :)
-
 -- bind to hotkeys; WARNING: at least one modifier key is required!
 hs.hotkey.bind('alt','tab','Next window',function()switcher:next()end)
 hs.hotkey.bind('alt-shift','tab','Prev window',function()switcher:previous()end)
+
+-- Mouse follows window focus
+hs.window.filter.default:subscribe(hs.window.filter.windowFocused, function(window, appName)
+  spoon.WinWin:centerCursor()
+end)
 
 -- =====================
 -- Window movement

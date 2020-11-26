@@ -1,4 +1,5 @@
 # If you come from bash you might have to change your $PATH.
+export JAVA_HOME=$(/usr/libexec/java_home -v 14)
 export GOPATH=$HOME/go
 export DATADOG_ROOT=/Users/michael.shaughnessy/dd
 export PATH=$HOME/bin:/usr/local/bin:$DATADOG_ROOT/devtools/bin:$GOPATH/bin:$HOME/.perl6/bin:/usr/local/Cellar/rakudo-star/2020.01_1/share/perl6/site/bin:$PATH
