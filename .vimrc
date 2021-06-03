@@ -16,6 +16,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'godlygeek/tabular'
 " JSON front matter highlight plugin
 Plug 'elzr/vim-json'
+" Plug 'neoclide/coc.nvim'
 Plug 'plasticboy/vim-markdown'
 Plug 'arcticicestudio/nord-vim'
 Plug 'Raku/vim-raku'
@@ -32,10 +33,10 @@ Plug 'junegunn/fzf'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'google/vim-searchindex'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
 Plug 'ruanyl/vim-gh-line'
+Plug 'psf/black'
 
 call plug#end()
 
@@ -59,8 +60,8 @@ set nofoldenable
 "Toggle relative line numbering when focus changes to another pane
 augroup numbertoggle
     autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter,WinLeave * set norelativenumber
+    autocmd BufLeave,CmdLineEnter,FocusLost,InsertEnter,WinLeave * set nornu | redraw
+    autocmd BufEnter,CmdlineLeave,FocusGained,InsertLeave,WinEnter * set rnu
 augroup END
 set guioptions-=T "turns off toolbar
 set tabstop=4 "sets tabs already in document to 4 spaces
@@ -177,6 +178,10 @@ nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
+
+" Vim airline remove error and warning sections
+let g:airline_section_error = ''
+let g:airline_section_warning = ''
 
 """""""""
 " Misc. "
