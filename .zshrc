@@ -129,7 +129,7 @@ alias flare="vim -c 'cd ~/Downloads/flare/'"
 alias features="cd ~/dd/consul-config/datadog/"
 alias ddoc="cd ~/dd/documentation/"
 alias logs="cd ~/logstest/"
-alias note="vim ~/vimwiki/index.md"
+# alias note="vim -c 'cd ~/Dropbox/kb'"
 alias bm="vim ~/vimwiki/chrome-bookmarks.md"
 alias todo="vim ~/vimwiki/todo/Tasks.md"
 alias regexbuddy="wine ~/.wine/drive_c/Program\ Files/Just\ Great\ Software/RegexBuddy\ 4/RegexBuddy4.exe"
@@ -152,7 +152,7 @@ alias logs_f="export DEVENV_MODE=FRONTEND"
 alias logs_b="export DEVENV_MODE=BACKEND"
 alias logs_o="export DEVENV_MODE=BACKEND_ONLY"
 alias logs_ecr="export DEVENV_USE_ECR=1"
-alias maven_install="mvn install clean -DskipTests"
+alias maven_install="mvn install clean -DskipTests -Pproduction"
 
 # snippets
 lastdl () { echo "~/Downloads/$(ls -tr ~/Downloads/|tail -1)" }
