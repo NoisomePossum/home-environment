@@ -1,0 +1,5 @@
+.DS_STORE
+.netrwhist
+.vim/undo/*
+Session.vim
+.vim/plugged/
