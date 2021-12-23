@@ -162,7 +162,7 @@ spoon.WindowScreenLeftAndRight:bindHotkeys({
 -- end)
 
 hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "t", function()
-  hs.application.launchOrFocus("alacritty")
+  hs.application.launchOrFocus("kitty")
 end)
 
 -- hs.hotkey.bind({"ctrl", "alt", "shift", "cmd"}, "s", function()
