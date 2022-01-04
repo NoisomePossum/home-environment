@@ -26,7 +26,6 @@ paq {'lewis6991/gitsigns.nvim'}              -- Git status indicators in left gu
 paq {'arcticicestudio/nord-vim'}             -- Nord colorscheme
 paq {'hrsh7th/nvim-compe'}                   -- auto-completion
 paq {'vhyrro/neorg'}                         -- Note organizer and todo list manager
-paq {'glacambre/firenvim', run = vim.fn["firenvim#install"]}   -- Browser plugin to use vim in text boxes
 
 paq {'godlygeek/tabular'}
 paq {'elzr/vim-json'}
