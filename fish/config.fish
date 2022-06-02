@@ -10,6 +10,7 @@ fish_add_path /usr/local/bin
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_CASK_OPTS=--require-sha
 
+# eval "(nodenv init -)"
 # Load ruby shims
 # eval "(rbenv init -)"
 
@@ -51,15 +52,15 @@ export GO111MODULE=auto
 status is-login; and pyenv init --path | source
 pyenv init - | source
 fish_add_path /usr/local/opt/ruby/bin
-fish_add_path /usr/local/Cellar/rakudo/2021.06/share/perl6/site/bin
-fish_add_path /usr/local/lib/ruby/gems/3.0.0/bin
+fish_add_path /usr/local/Cellar/rakudo/2021.12/share/perl6/site/bin
+fish_add_path /usr/local/lib/ruby/gems/3.1.2/bin
 
 fish_vi_key_bindings
 export EDITOR="/usr/local/bin/nvim"
 export VISUAL="/usr/local/bin/nvim"
 
 
-export JAVA_HOME=(/usr/libexec/java_home -v 14)
+export JAVA_HOME=(/usr/libexec/java_home -v 15)
 
 # old-style highlighting
 set fish_color_normal normal

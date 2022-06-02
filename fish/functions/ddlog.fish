@@ -1,3 +1,3 @@
-function ddlog --wraps='raku ~/raku-projects/ddlog-forwarder/ddforward.raku' --description 'alias ddlog raku ~/raku-projects/ddlog-forwarder/ddforward.raku'
-  raku ~/raku-projects/ddlog-forwarder/ddforward.raku $argv; 
+function ddlog --wraps='python ~/cli-ddlogs-python/dd-forwarder.py' --description 'alias ddlog python ~/cli-ddlogs-python/dd-forwarder.py'
+  python ~/cli-ddlogs-python/dd-forwarder.py $argv; 
 end

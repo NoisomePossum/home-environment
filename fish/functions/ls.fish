@@ -1,3 +1,3 @@
-function ls --wraps=colorls --description 'alias ls colorls'
-  colorls $argv; 
+function ls --wraps=lsd --description 'alias ls lsd'
+  lsd $argv; 
 end

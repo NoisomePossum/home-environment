@@ -58,7 +58,8 @@
 
 function __custom_prompt -d 'Sets a custom prompt'
   # set prompt_text \uf054\uf895\uf054 
-  set prompt_text \uf206 '  ' \uf054
+  # set prompt_text \uf206 '  ' \uf054
+  set prompt_text \uf5a2 ' ' \uf054
   echo -ns $prompt_text 
 end
 
