@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red
@@ -15,4 +15,5 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/usr/local/Cellar/rakudo/2021\x2e12/share/perl6/site/bin\x1e/usr/local/lib/ruby/gems/3\x2e0\x2e0/bin\x1e/usr/local/Cellar/rakudo/2021\x2e06/share/perl6/site/bin\x1e/usr/local/opt/ruby/bin\x1e/Users/michael\x2eshaughnessy/dd/devtools/bin\x1e/usr/local/opt/awscli\x401/bin\x1e/usr/local/opt/coreutils/libexec/gnubin\x1e/usr/local/bin
