@@ -5,6 +5,7 @@
 # BEGIN ANSIBLE MANAGED BLOCK
 # Add homebrew binaries to the path.
 fish_add_path /usr/local/bin
+fish_add_path /opt/homebrew/bin
 
 # Force certain more-secure behaviours from homebrew
 export HOMEBREW_NO_INSECURE_REDIRECT=1
@@ -49,8 +50,8 @@ export HELM_DRIVER=configmap
 export GO111MODULE=auto
 # END ANSIBLE MANAGED BLOCK
 
-status is-login; and pyenv init --path | source
-pyenv init - | source
+# status is-login; and pyenv init --path | source
+# pyenv init - | source
 fish_add_path /usr/local/opt/ruby/bin
 fish_add_path /usr/local/Cellar/rakudo/2021.12/share/perl6/site/bin
 fish_add_path /usr/local/lib/ruby/gems/3.1.2/bin
@@ -60,7 +61,7 @@ export EDITOR="/usr/local/bin/nvim"
 export VISUAL="/usr/local/bin/nvim"
 
 
-export JAVA_HOME=(/usr/libexec/java_home -v 15)
+# export JAVA_HOME=(/usr/libexec/java_home -v 15)
 
 # old-style highlighting
 set fish_color_normal normal
