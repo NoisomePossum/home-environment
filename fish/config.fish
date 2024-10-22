@@ -50,11 +50,12 @@ export HELM_DRIVER=configmap
 export GO111MODULE=auto
 # END ANSIBLE MANAGED BLOCK
 
-# status is-login; and pyenv init --path | source
-# pyenv init - | source
+status is-login; and pyenv init --path | source
+pyenv init - | source
 fish_add_path /usr/local/opt/ruby/bin
 fish_add_path /usr/local/Cellar/rakudo/2021.12/share/perl6/site/bin
 fish_add_path /usr/local/lib/ruby/gems/3.1.2/bin
+fish_add_path /opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/bin
 
 fish_vi_key_bindings
 export EDITOR="/usr/local/bin/nvim"
